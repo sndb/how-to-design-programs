@@ -23,8 +23,8 @@
   (cond
     [(empty? (rest ne-l)) #true]
     [else
-     (and (> (first ne-l)
-             (first (rest ne-l)))
+     (and (>= (first ne-l)
+              (first (rest ne-l)))
           (sorted>? (rest ne-l)))]))
 
 ;l (first l) (rest l) (sorted>? (rest l)) (sorted>? l)
