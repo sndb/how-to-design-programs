@@ -24,6 +24,5 @@
 
 (define (drop l n)
   (cond
-    [(empty? l) '()]
-    [(zero? n) l]
-    [(positive? n) (drop (rest l) (sub1 n))]))
+    [(or (empty? l) (zero? n)) l]
+    [else (drop (rest l) (sub1 n))]))
